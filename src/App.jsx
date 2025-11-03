@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, Footer, MobileDrawer } from "./components"; // Remove FooterCTA
+import { Header, Footer, FooterCTA, MobileDrawer } from "./components";
 import AppRoutes from "./routes/AppRoutes";
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
   const navigate = (path) => {
     setCurrentPage(path);
     setIsDrawerOpen(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -19,21 +19,19 @@ const App = () => {
         currentPath={currentPage}
         onMenuClick={() => setIsDrawerOpen(true)}
       />
-
+      
       <MobileDrawer
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         onNavigate={navigate}
       />
-
-      <main className="pt-16 pb-0 md:pb-0">
-        {" "}
-        {/* Added pb-20 for mobile spacing */}
+      
+      <main className="pt-16">
         <AppRoutes currentPath={currentPage} />
       </main>
-
+      
       <Footer onNavigate={navigate} />
-      {/* Removed <FooterCTA /> - it's now inside Footer component */}
+      <FooterCTA />
     </div>
   );
 };
