@@ -133,43 +133,48 @@ const Footer = ({ onNavigate }) => {
             </p>
           </div>
 
-          {/* Social Media Icons */}
+          {/* Social Media Icons — FIXED: use buttons instead of <a href="#"> */}
           <div className="flex items-center justify-center gap-6 mb-8">
-            <a
-              href="#"
-              className="hover:text-amber-500 transition-colors"
-              aria-label="Facebook"
+            <button
+              type="button"
+              onClick={() => window.open("https://facebook.com/yourpage", "_blank")}
+              className="hover:text-amber-500 transition-colors focus:outline-none"
+              aria-label="Visit us on Facebook"
             >
               <Facebook size={24} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-amber-500 transition-colors"
-              aria-label="YouTube"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("https://youtube.com/yourchannel", "_blank")}
+              className="hover:text-amber-500 transition-colors focus:outline-none"
+              aria-label="Visit us on YouTube"
             >
               <Youtube size={24} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-amber-500 transition-colors"
-              aria-label="Twitter"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("https://twitter.com/yourhandle", "_blank")}
+              className="hover:text-amber-500 transition-colors focus:outline-none"
+              aria-label="Visit us on Twitter"
             >
               <Twitter size={24} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-amber-500 transition-colors"
-              aria-label="Instagram"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("https://instagram.com/yourprofile", "_blank")}
+              className="hover:text-amber-500 transition-colors focus:outline-none"
+              aria-label="Visit us on Instagram"
             >
               <Instagram size={24} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-amber-500 transition-colors"
-              aria-label="LinkedIn"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("https://linkedin.com/company/yourcompany", "_blank")}
+              className="hover:text-amber-500 transition-colors focus:outline-none"
+              aria-label="Visit us on LinkedIn"
             >
               <Linkedin size={24} />
-            </a>
+            </button>
           </div>
 
           {/* Divider */}
@@ -184,15 +189,24 @@ const Footer = ({ onNavigate }) => {
 
       {/* Mobile Footer CTA */}
       <div className="fixed bottom-0 left-0 right-0 bg-[#121212] text-gray-300 flex divide-x divide-gray-700 z-30 md:hidden">
-        <button className="flex-1 flex items-center justify-center gap-2 py-4 hover:bg-gray-800 transition-colors">
+        <button
+          type="button"
+          className="flex-1 flex items-center justify-center gap-2 py-4 hover:bg-gray-800 transition-colors focus:outline-none"
+        >
           <Phone size={20} />
           <span className="text-xs sm:text-sm">CALL BACK</span>
         </button>
-        <button className="flex-1 flex items-center justify-center gap-2 py-4 hover:bg-gray-800 transition-colors">
+        <button
+          type="button"
+          className="flex-1 flex items-center justify-center gap-2 py-4 hover:bg-gray-800 transition-colors focus:outline-none"
+        >
           <Phone size={20} />
           <span className="text-xs sm:text-sm">CALL US</span>
         </button>
-        <button className="flex-1 flex items-center justify-center gap-2 py-4 bg-[#1a1a1a] text-white font-semibold hover:bg-[#252525] transition-colors border-l-2 border-r-2 border-green-600">
+        <button
+          type="button"
+          className="flex-1 flex items-center justify-center gap-2 py-4 bg-[#1a1a1a] text-white font-semibold hover:bg-[#252525] transition-colors border-l-2 border-r-2 border-green-600 focus:outline-none"
+        >
           <MessageCircle size={20} />
           <span className="text-xs sm:text-sm">WHATSAPP</span>
         </button>
