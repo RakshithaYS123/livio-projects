@@ -20,23 +20,15 @@ const ChairmanMessagePage = () => {
       {/* Content Section */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Left Column - Chairman Image/Info */}
+          {/* Left Column - Chairman Image */}
           <div className="space-y-6">
             <div className="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden">
-              {/* Replace with actual chairman image */}
               <div className="w-full h-full flex items-center justify-center text-gray-500">
                 <div className="text-center">
                   <div className="w-32 h-32 bg-gray-400 rounded-full mx-auto mb-4"></div>
                   <p className="text-lg font-medium">Chairman Photo</p>
                 </div>
               </div>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#B84A2B]">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">LIVIO Interiors</h3>
-              <p className="text-gray-600">
-                "Quality is not an option; it's our promise."
-              </p>
             </div>
           </div>
 
@@ -60,42 +52,9 @@ const ChairmanMessagePage = () => {
                 </p>
 
                 <p className="text-base md:text-lg">
-                  We believe our success lies not in the number of projects we complete, 
-                  but in the lasting relationships we build and the trust we earn with every delivery.
+                  We believe our success lies not in the number of projects completed, 
+                  but in the <span className="font-semibold text-[#B84A2B]">quality of trust we build with every client.</span>
                 </p>
-
-                <div className="pt-6 border-t border-gray-200">
-                  <p className="text-base md:text-lg italic text-gray-600">
-                    Our commitment is simple: to transform spaces with integrity, innovation, and uncompromising quality.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Core Values */}
-            <div className="grid grid-cols-1 gap-4 mt-8">
-              <div className="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#B84A2B] transition-colors">
-                <div className="w-2 h-2 bg-[#B84A2B] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Perfection in Design</h4>
-                  <p className="text-sm text-gray-600">Every detail crafted with precision and care</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#B84A2B] transition-colors">
-                <div className="w-2 h-2 bg-[#B84A2B] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Precision in Execution</h4>
-                  <p className="text-sm text-gray-600">Flawless implementation from concept to completion</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#B84A2B] transition-colors">
-                <div className="w-2 h-2 bg-[#B84A2B] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Satisfaction in Experience</h4>
-                  <p className="text-sm text-gray-600">Building lasting relationships through quality delivery</p>
-                </div>
               </div>
             </div>
 
@@ -103,7 +62,7 @@ const ChairmanMessagePage = () => {
             <div className="pt-8">
               <div className="border-t-2 border-[#B84A2B] w-48 mb-4"></div>
               <p className="font-semibold text-gray-900 text-lg">Chairman</p>
-              <p className="text-gray-600">LIVIO Interiors</p>
+              <p className="text-gray-600">LIVIO Projects</p>
             </div>
           </div>
         </div>

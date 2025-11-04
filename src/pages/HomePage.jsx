@@ -64,13 +64,17 @@ const HomePage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-screen overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/images/hero.png')`,
-          }}
-        />
+  
+        <div className="relative h-screen overflow-hidden">
+  {/* Background video */}
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    src="/images/Hero-video.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
         <div className="absolute inset-0 bg-black/30" />
         
         <div className="relative h-full flex flex-col items-center justify-center text-center px-4 pb-24 md:pb-32">
@@ -203,48 +207,7 @@ Best regards,
         </div>
       </div>
 
-      {/* Featured Projects Section */}
-      <div className="py-20 px-6 md:px-16 lg:px-24 bg-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Our Latest Projects
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-            Explore our portfolio of exceptional residential and commercial spaces, designed with precision and built to perfection.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project Cards - You can add your actual project data here */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[4/3] bg-gray-200 mb-4 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Luxury Villa</h3>
-              <p className="text-gray-600">Modern residential design</p>
-            </div>
-            
-            <div className="group cursor-pointer">
-              <div className="aspect-[4/3] bg-gray-200 mb-4 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Urban Apartment</h3>
-              <p className="text-gray-600">Contemporary interior solutions</p>
-            </div>
-            
-            <div className="group cursor-pointer">
-              <div className="aspect-[4/3] bg-gray-200 mb-4 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Commercial Space</h3>
-              <p className="text-gray-600">Elegant office design</p>
-            </div>
-          </div>
-          
-          <button className="mt-12 px-8 py-3 bg-[#B84A2B] text-white rounded hover:bg-[#a24328] transition-colors font-medium">
-            View All Projects
-          </button>
-        </div>
-      </div>
+       
     </div>
   );
 };
