@@ -40,4 +40,6 @@ export const routes = {
   "/what-we-do/residential/penthouses": PenthousesPage,
   "/what-we-do/commercial": CommercialPage,
   "/what-we-do/contracting": ContractingPage,
+  // Fallback route for unknown paths
+  "*": NotFoundPage,
 };
