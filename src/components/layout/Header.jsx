@@ -10,10 +10,10 @@ const Header = ({ onNavigate, currentPath, onMenuClick }) => {
       path: "/who-we-are",
       children: [
         { title: "Philosophy", path: "/who-we-are/philosophy" },
-        { title: "Leadership", path: "/who-we-are/leadership" },
+        // { title: "Leadership", path: "/who-we-are/leadership" },
         { title: "About Our Founder", path: "/who-we-are/about-founder" },
         { title: "Chairman's Message", path: "/who-we-are/chairman-message" },
-        { title: "Board Of Directors", path: "/who-we-are/board-of-directors" },
+        // { title: "Board Of Directors", path: "/who-we-are/board-of-directors" },
         { title: "Leadership Team", path: "/who-we-are/leadership-team" },
       ],
     },
@@ -30,9 +30,9 @@ const Header = ({ onNavigate, currentPath, onMenuClick }) => {
       ],
     },
     { label: "SUSTAINABILITY", path: "/sustainability" },
-    { label: "MEDIA CENTRE", path: "/media-centre" },
+    // { label: "MEDIA CENTRE", path: "/media-centre" },
     { label: "CAREERS", path: "/careers" },
-    { label: "BLOG", path: "/blog" },
+    // { label: "BLOG", path: "/blog" },
     { label: "CONTACT US", path: "/contact-us" },
   ];
 

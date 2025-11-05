@@ -53,7 +53,7 @@ const SustainabilityPage = () => {
             Let's create spaces that are built to last
           </p>
           <a
-            href={`mailto:rakshithays986@gmail.com?subject=${encodeURIComponent(
+            href={`mailto:Info@livioprojects.com?subject=${encodeURIComponent(
               "Enquiry Regarding Civil / Interior Work"
             )}`}
             className="inline-block px-8 py-3 bg-[#B84A2B] text-white rounded hover:bg-[#a24328] transition-colors font-medium"

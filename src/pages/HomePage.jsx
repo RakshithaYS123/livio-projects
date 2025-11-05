@@ -91,7 +91,7 @@ const HomePage = () => {
               Explore Projects
             </button>
             <a
-              href={`mailto:rakshithays986@gmail.com?subject=${encodeURIComponent(
+              href={`mailto:Info@livioprojects.com?subject=${encodeURIComponent(
                 "Enquiry Regarding Civil / Interior Work"
               )}&body=${encodeURIComponent(
                 `Hello Livio Team,

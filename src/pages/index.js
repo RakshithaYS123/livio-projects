@@ -9,7 +9,7 @@ export { default as SustainabilityPage } from "./SustainabilityPage";
 
 // Who We Are pages
 export { default as PhilosophyPage } from "./who-we-are/PhilosophyPage";
-export { default as LeadershipPage } from "./who-we-are/LeadershipPage";
+// export { default as LeadershipPage } from "./who-we-are/LeadershipPage";
 export { default as AboutFounderPage } from "./who-we-are/AboutFounderPage";
 export { default as ChairmanMessagePage } from "./who-we-are/ChairmanMessagePage";
 export { default as BoardOfDirectorsPage } from "./who-we-are/BoardOfDirectorsPage";

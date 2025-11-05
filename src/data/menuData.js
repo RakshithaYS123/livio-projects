@@ -8,10 +8,10 @@ export const MENU = [
         path: "/who-we-are/philosophy",
         subsections: ["Crafted with quality", "Vision & Mission", "Livio way"],
       },
-      { title: "Leadership", path: "/who-we-are/leadership" },
+      // { title: "Leadership", path: "/who-we-are/leadership" },
       { title: "About Our Founder", path: "/who-we-are/about-founder" },
       { title: "Chairman's Message", path: "/who-we-are/chairman-message" },
-      { title: "Board Of Directors", path: "/who-we-are/board-of-directors" },
+      // { title: "Board Of Directors", path: "/who-we-are/board-of-directors" },
       { title: "Leadership Team", path: "/who-we-are/leadership-team" },
     ],
   },
@@ -28,9 +28,11 @@ export const MENU = [
       { title: "Contracting", path: "/what-we-do/contracting" },
     ],
   },
-  { title: "CONTACT US", path: "/contact-us" },
-  { title: "BLOG", path: "/blog" },
-  { title: "CAREERS", path: "/careers" },
-  { title: "MEDIA CENTRE", path: "/media-centre" },
+
+  // { title: "BLOG", path: "/blog" },
+
+  // { title: "MEDIA CENTRE", path: "/media-centre" },
   { title: "SUSTAINABILITY", path: "/sustainability" },
+  { title: "CAREERS", path: "/careers" },
+  { title: "CONTACT US", path: "/contact-us" },
 ];

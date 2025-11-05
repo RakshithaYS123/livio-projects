@@ -125,7 +125,7 @@ const Footer = ({ onNavigate }) => {
                 href="tel:08046464500"
                 className="text-lg hover:text-amber-500 transition-colors"
               >
-                080 46464500
+                91108 44903
               </a>
             </div>
             <p className="text-sm text-gray-400">
