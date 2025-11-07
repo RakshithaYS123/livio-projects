@@ -9,7 +9,7 @@ const SustainabilityPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
           style={{
-            backgroundImage: `url('/images/sustainability-hero.jpg')`,
+            backgroundImage: `url('/images/sustainability-hero.png')`,
           }}
         />
         <div className="absolute inset-0 bg-black/40" />

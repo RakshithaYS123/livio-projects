@@ -34,19 +34,33 @@ const CareersPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative h-[60vh] md:h-[70vh] bg-gradient-to-br from-gray-800 to-gray-600 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center z-10 px-4">
-            <h1 className="text-5xl md:text-7xl font-light text-white mb-4 tracking-wide">
-              Careers
-            </h1>
-            <div className="w-20 h-1 mx-auto" style={{ backgroundColor: '#B84A2B' }}></div>
-          </div>
-        </div>
-        {/* Decorative building silhouette */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
-      </div>
+      <div className="relative h-[60vh] md:h-[80vh] overflow-hidden">
+
+  {/* Background Image */}
+  <div
+    className="absolute inset-0"
+    style={{ 
+      backgroundImage: "url('/images/carrer.png')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}
+  ></div>
+
+  {/* Subtle Dark Overlay for better text readability */}
+  <div className="absolute inset-0 bg-black/40"></div>
+  
+  {/* Content */}
+  <div className="relative h-full flex items-center justify-center">
+    <div className="text-center z-10 px-4">
+      <h1 className="text-5xl md:text-7xl font-light text-white mb-4 tracking-wide drop-shadow-lg">
+        Careers
+      </h1>
+      <div className="w-20 h-1 mx-auto" style={{ backgroundColor: '#B84A2B' }}></div>
+    </div>
+  </div>
+</div>
+
 
       {/* Motto Section */}
       <div className="max-w-4xl mx-auto px-6 py-16 md:py-24 text-center">

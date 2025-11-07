@@ -64,30 +64,39 @@ const HomePage = () => {
   return (
     <div>
       {/* Hero Section */}
-  
-        <div className="relative h-screen overflow-hidden">
-  {/* Background video */}
-  <video
-    className="absolute inset-0 w-full h-full object-cover"
-    src="/images/Hero-video.mp4"
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
+      <div className="relative w-full h-screen overflow-hidden bg-black border-b-4 md:border-b-8 border-white">
+        {/* Background video */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src="/images/Hero-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center center',
+            width: '100%',
+            height: '100%'
+          }}
+        />
+        
+        {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/30" />
         
-        <div className="relative h-full flex flex-col items-center justify-center text-center px-4 pb-24 md:pb-32">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 max-w-3xl leading-tight">
+        {/* Content */}
+        <div className="relative h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 pb-24 md:pb-32 z-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 max-w-3xl leading-tight drop-shadow-lg">
             Crafted for Comfort. Designed with Soul. Built with Quality that Lasts.
           </h1>
           
-          <p className="text-lg md:text-xl mb-8 max-w-2xl" style={{ color: "#aea7a7ff" }}>
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl drop-shadow-md" style={{ color: "#aea7a7ff" }}>
             Welcome to LIVIO — Crafted with Quality.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-3 bg-white text-gray-800 rounded hover:bg-gray-100 transition-colors font-medium">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
+            <button className="px-6 sm:px-8 py-3 bg-white text-gray-800 rounded hover:bg-gray-100 transition-colors font-medium shadow-lg">
               Explore Projects
             </button>
             <a
@@ -111,7 +120,7 @@ Best regards,
 [Your Full Name]
 [Your Contact Number]`
               )}`}
-              className="px-8 py-3 bg-[#B84A2B] text-white rounded hover:bg-[#a24328] transition-colors font-medium text-center"
+              className="px-6 sm:px-8 py-3 bg-[#B84A2B] text-white rounded hover:bg-[#a24328] transition-colors font-medium text-center shadow-lg"
             >
               Get In Touch
             </a>
@@ -120,9 +129,9 @@ Best regards,
       </div>
 
       {/* Carousel Section */}
-      <div className="relative w-full h-screen bg-white overflow-hidden px-4 md:px-8 lg:px-16 py-6 md:py-10">
+      <div className="relative w-full h-screen bg-white overflow-hidden px-0 sm:px-4 md:px-8 lg:px-16 py-0 sm:py-6 md:py-10">
         {/* Carousel Images */}
-        <div className="relative w-full h-full rounded-lg md:rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative w-full h-full sm:rounded-lg md:rounded-2xl overflow-hidden shadow-2xl">
           {carouselImages.map((slide, index) => (
             <div
               key={index}
@@ -130,40 +139,37 @@ Best regards,
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage: `url(${slide.url})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
+              <img
+                src={slide.url}
+                alt={slide.title}
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-black/30" />
               
               {/* Slide Content */}
-              <div className="relative h-full flex items-center px-6 md:px-16 lg:px-24">
+              <div className="relative h-full flex items-center px-4 sm:px-6 md:px-16 lg:px-24">
                 <div className="max-w-2xl text-white">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 leading-tight drop-shadow-lg">
                     {slide.title}
                   </h2>
                   {slide.subtitle && (
-                    <p className="text-xl md:text-2xl mb-4 font-light">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 font-light drop-shadow-md">
                       {slide.subtitle}
                     </p>
                   )}
                   {slide.price && (
-                    <p className="text-2xl md:text-3xl mb-6 font-medium">
+                    <p className="text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6 font-medium drop-shadow-md">
                       {slide.price}
                     </p>
                   )}
                   {slide.project && (
-                    <div className="mt-8">
-                      <p className="text-sm mb-2 tracking-widest">PRE-LAUNCHING</p>
-                      <h3 className="text-5xl md:text-6xl font-light mb-2">
+                    <div className="mt-6 sm:mt-8">
+                      <p className="text-xs sm:text-sm mb-2 tracking-widest">PRE-LAUNCHING</p>
+                      <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-2">
                         {slide.project}
                       </h3>
                       {slide.location && (
-                        <p className="text-lg tracking-wider">{slide.location}</p>
+                        <p className="text-base sm:text-lg tracking-wider">{slide.location}</p>
                       )}
                     </div>
                   )}
@@ -173,32 +179,32 @@ Best regards,
           ))}
         </div>
 
-        {/* Navigation Arrows */}
+        {/* Navigation Arrows - Hidden on small mobile, visible on larger screens */}
         <button
           onClick={prevSlide}
-          className="absolute left-6 md:left-12 lg:left-20 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 md:p-4 rounded-full transition-all z-10"
+          className="hidden sm:block absolute left-2 sm:left-6 md:left-12 lg:left-20 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 sm:p-3 md:p-4 rounded-full transition-all z-10"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
+          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
         </button>
         
         <button
           onClick={nextSlide}
-          className="absolute right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 md:p-4 rounded-full transition-all z-10"
+          className="hidden sm:block absolute right-2 sm:right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 sm:p-3 md:p-4 rounded-full transition-all z-10"
           aria-label="Next slide"
         >
-          <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
+          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
         </button>
 
         {/* Dot Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 md:gap-3 z-10">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 md:gap-3 z-10">
           {carouselImages.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
                 index === currentSlide
-                  ? "bg-white w-8 md:w-10"
+                  ? "bg-white w-6 sm:w-8 md:w-10"
                   : "bg-white/50 hover:bg-white/75"
               }`}
               aria-label={`Go to slide ${index + 1}`}
@@ -206,8 +212,6 @@ Best regards,
           ))}
         </div>
       </div>
-
-       
     </div>
   );
 };
