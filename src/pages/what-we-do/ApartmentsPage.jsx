@@ -1,7 +1,8 @@
+// src/pages/what-we-do/ApartmentsPage.jsx
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Home, Bed, Utensils, Lightbulb, Tv, Bath, Wind, Archive, Package, Wallpaper } from 'lucide-react';
 
-const ApartmentInteriorsPage = () => {
+const ApartmentsPage = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [scrollY, setScrollY] = useState(0);
 
@@ -88,7 +89,7 @@ const ApartmentInteriorsPage = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
+    <div className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-10 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div 
@@ -109,7 +110,6 @@ const ApartmentInteriorsPage = () => {
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 md:py-32 px-4 overflow-hidden">
-        {/* Animated Grid Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 opacity-10" style={{
             backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
@@ -118,7 +118,6 @@ const ApartmentInteriorsPage = () => {
           }} />
         </div>
         
-        {/* Floating Decorative Shapes */}
         <div className="absolute top-10 left-10 md:left-20 w-20 h-20 md:w-32 md:h-32 rounded-full opacity-20 animate-float" style={{backgroundColor: '#B84A2B'}} />
         <div className="absolute bottom-10 right-10 md:right-20 w-24 h-24 md:w-40 md:h-40 rounded-full opacity-20 animate-float-delayed" style={{backgroundColor: '#B84A2B'}} />
         <div className="absolute top-1/2 right-1/4 w-16 h-16 rotate-45 opacity-10 animate-spin-slow" style={{backgroundColor: '#B84A2B'}} />
@@ -154,13 +153,14 @@ const ApartmentInteriorsPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-6 lg:gap-8">
           {interiorCategories.map((category, index) => {
             const Icon = category.icon;
-            const isFeatured = category.featured;
+            // ✅ FIXED: Removed unused `isFeatured` assignment
+            // Instead, use `category.featured` directly in JSX below
             
             // Define grid spans for desktop masonry layout
             let gridClass = 'lg:col-span-4';
             if (index === 0) gridClass = 'lg:col-span-8 lg:row-span-2'; // Large hero
-            if (index === 4) gridClass = 'lg:col-span-8'; // Wide
-            if (index === 8) gridClass = 'lg:col-span-6 lg:row-span-2'; // Tall
+            if (index === 4) gridClass = 'lg:col-span-8';
+            if (index === 8) gridClass = 'lg:col-span-6 lg:row-span-2';
             
             return (
               <div
@@ -172,9 +172,7 @@ const ApartmentInteriorsPage = () => {
                   animation: `slideUpFade 0.8s ease-out ${index * 0.15}s both`
                 }}
               >
-                {/* Image Container with Parallax Effect */}
                 <div className={`relative overflow-hidden ${index === 0 ? 'h-96 md:h-full min-h-[500px]' : index === 8 ? 'h-96 md:h-full' : 'h-80 md:h-96'}`}>
-                  {/* Main Image */}
                   <div className="absolute inset-0">
                     <img
                       src={category.image}
@@ -190,7 +188,7 @@ const ApartmentInteriorsPage = () => {
                     />
                   </div>
                   
-                  {/* Animated Gradient Overlay */}
+                  {/* Gradient Overlay */}
                   <div 
                     className="absolute inset-0 transition-all duration-700"
                     style={{
@@ -200,7 +198,7 @@ const ApartmentInteriorsPage = () => {
                     }}
                   />
 
-                  {/* Decorative Corner Elements */}
+                  {/* Decorative Corners */}
                   <div 
                     className="absolute top-0 right-0 w-24 md:w-32 h-24 md:h-32 opacity-30 transition-all duration-700 group-hover:opacity-50 group-hover:scale-110"
                     style={{
@@ -230,9 +228,18 @@ const ApartmentInteriorsPage = () => {
                     <Icon size={index === 0 ? 36 : 28} className="transition-transform duration-700 group-hover:scale-110" />
                   </div>
 
-                  {/* Content Overlay */}
+                  {/* Content */}
                   <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
-                    {/* Animated Accent Line */}
+                    {/* Featured Badge ✅ Now using `category.featured` */}
+                    {category.featured && (
+                      <div 
+                        className="absolute top-4 left-4 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-full z-10 flex items-center gap-1"
+                        style={{ boxShadow: '0 4px 12px rgba(255,215,0,0.5)' }}
+                      >
+                        <span>★</span> Featured
+                      </div>
+                    )}
+
                     <div 
                       className="h-1 mb-4 md:mb-6 transition-all duration-700 rounded-full"
                       style={{
@@ -242,12 +249,10 @@ const ApartmentInteriorsPage = () => {
                       }}
                     />
                     
-                    {/* Title */}
                     <h3 className={`font-bold text-white mb-2 md:mb-3 transition-all duration-500 ${index === 0 ? 'text-3xl md:text-4xl' : 'text-xl md:text-2xl'}`}>
                       {category.title}
                     </h3>
                     
-                    {/* Description */}
                     <p 
                       className="text-gray-100 text-sm md:text-base mb-4 md:mb-6 transition-all duration-700 leading-relaxed"
                       style={{
@@ -259,7 +264,6 @@ const ApartmentInteriorsPage = () => {
                       {category.description}
                     </p>
                     
-                    {/* CTA Button */}
                     <button 
                       className="flex items-center gap-2 text-white font-semibold text-sm md:text-base px-6 py-3 rounded-xl transition-all duration-700 backdrop-blur-md w-fit"
                       style={{
@@ -280,7 +284,6 @@ const ApartmentInteriorsPage = () => {
                     </button>
                   </div>
 
-                  {/* Animated Border on Hover */}
                   <div 
                     className="absolute inset-0 border-4 rounded-3xl transition-all duration-700 pointer-events-none"
                     style={{
@@ -290,7 +293,6 @@ const ApartmentInteriorsPage = () => {
                     }}
                   />
 
-                  {/* Shine Effect */}
                   <div 
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"
                     style={{
@@ -305,7 +307,7 @@ const ApartmentInteriorsPage = () => {
           })}
         </div>
 
-        {/* Bottom Stats Section */}
+        {/* Stats */}
         <div className="grid grid-cols-3 gap-4 md:gap-8 mt-16 md:mt-24 pt-12 md:pt-16 border-t-2 border-gray-200">
           {[
             { number: '50+', label: 'Completed Projects' },
@@ -330,18 +332,16 @@ const ApartmentInteriorsPage = () => {
           ))}
         </div>
 
-        {/* Bottom CTA Section */}
+        {/* CTA */}
         <div className="mt-16 md:mt-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden shadow-2xl">
-          {/* Animated Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
-              backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px)',
+              backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px)`,
               backgroundSize: '40px 40px',
               animation: 'patternMove 20s linear infinite'
             }} />
           </div>
           
-          {/* Decorative Blobs */}
           <div className="absolute top-0 left-0 w-64 h-64 rounded-full opacity-20 blur-3xl animate-pulse" style={{backgroundColor: '#B84A2B'}} />
           <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full opacity-20 blur-3xl animate-pulse-delayed" style={{backgroundColor: '#B84A2B'}} />
           
@@ -365,131 +365,31 @@ const ApartmentInteriorsPage = () => {
         </div>
       </div>
 
+      {/* Animations */}
       <style jsx>{`
         @keyframes slideUpFade {
-          from {
-            opacity: 0;
-            transform: translateY(60px) scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
+          from { opacity: 0; transform: translateY(60px) scale(0.95); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
         }
+        @keyframes fade-in-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes expand { from { width: 0; opacity: 0; } to { width: 100%; opacity: 1; } }
+        @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(10deg); } }
+        @keyframes float-delayed { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-30px) rotate(-10deg); } }
+        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes shine { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+        @keyframes patternMove { 0% { transform: translate(0, 0); } 100% { transform: translate(40px, 40px); } }
+        @keyframes pulse-delayed { 0%, 100% { opacity: 0.2; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.1); } }
 
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes expand {
-          from {
-            width: 0;
-            opacity: 0;
-          }
-          to {
-            width: 100%;
-            opacity: 1;
-          }
-        }
-
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(10deg);
-          }
-        }
-
-        @keyframes float-delayed {
-          0%, 100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-30px) rotate(-10deg);
-          }
-        }
-
-        @keyframes spin-slow {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        @keyframes shine {
-          0% {
-            background-position: -200% 0;
-          }
-          100% {
-            background-position: 200% 0;
-          }
-        }
-
-        @keyframes gridMove {
-          0% {
-            transform: translate(0, 0);
-          }
-          100% {
-            transform: translate(50px, 50px);
-          }
-        }
-
-        @keyframes patternMove {
-          0% {
-            transform: translate(0, 0);
-          }
-          100% {
-            transform: translate(40px, 40px);
-          }
-        }
-
-        @keyframes pulse-delayed {
-          0%, 100% {
-            opacity: 0.2;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.3;
-            transform: scale(1.1);
-          }
-        }
-
-        .animate-fade-in-up {
-          animation: fade-in-up 1s ease-out both;
-        }
-
-        .animate-expand {
-          animation: expand 1s ease-out 0.5s both;
-        }
-
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-float-delayed {
-          animation: float-delayed 8s ease-in-out infinite;
-        }
-
-        .animate-spin-slow {
-          animation: spin-slow 20s linear infinite;
-        }
-
-        .animate-pulse-delayed {
-          animation: pulse-delayed 3s ease-in-out infinite;
-        }
+        .animate-fade-in-up { animation: fade-in-up 1s ease-out both; }
+        .animate-expand { animation: expand 1s ease-out 0.5s both; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-delayed 8s ease-in-out infinite; }
+        .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+        .animate-pulse-delayed { animation: pulse-delayed 3s ease-in-out infinite; }
       `}</style>
     </div>
   );
 };
 
-export default ApartmentInteriorsPage;
+export default ApartmentsPage;
