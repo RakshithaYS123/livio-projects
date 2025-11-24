@@ -23,7 +23,7 @@ const Header = ({ onNavigate, currentPath, onMenuClick }) => {
       children: [
         { title: "Apartments", path: "/what-we-do/residential/apartments" },
         { title: "Villas", path: "/what-we-do/residential/villas" },
-        { title: "Villaments", path: "/what-we-do/residential/villaments" },
+        // { title: "Villaments", path: "/what-we-do/residential/villaments" },
         { title: "Penthouses", path: "/what-we-do/residential/penthouses" },
         { title: "Commercial", path: "/what-we-do/commercial" },
         { title: "Contracting", path: "/what-we-do/contracting" },

@@ -18,7 +18,7 @@ export { default as LeadershipTeamPage } from "./who-we-are/LeadershipTeamPage";
 // What We Do pages
 export { default as ApartmentsPage } from "./what-we-do/ApartmentsPage";
 export { default as VillasPage } from "./what-we-do/VillasPage";
-export { default as VillamentsPage } from "./what-we-do/VillamentsPage";
+// export { default as VillamentsPage } from "./what-we-do/VillamentsPage";
 export { default as PenthousesPage } from "./what-we-do/PenthousesPage";
 export { default as CommercialPage } from "./what-we-do/CommercialPage";
 export { default as ContractingPage } from "./what-we-do/ContractingPage";
