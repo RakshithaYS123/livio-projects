@@ -51,7 +51,7 @@ const Header = ({ onNavigate, currentPath, onMenuClick }) => {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <img
-          src="/images/logo.png"
+          src="/images/logo.jpeg"
           alt="Livio Logo"
           onClick={() => onNavigate("/")}
           className="h-10 cursor-pointer"

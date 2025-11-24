@@ -19,7 +19,7 @@ export const MENU = [
     title: "WHAT WE DO",
     path: "/what-we-do",
     children: [
-      { title: "Residential", isHeading: true },
+      // { title: "Residential", isHeading: true },
       { title: "Apartments", path: "/what-we-do/residential/apartments" },
       { title: "Villas", path: "/what-we-do/residential/villas" },
       { title: "Villaments", path: "/what-we-do/residential/villaments" },

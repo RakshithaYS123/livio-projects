@@ -307,7 +307,7 @@ const ApartmentsPage = () => {
           })}
         </div>
 
-        {/* Stats */}
+        {/* Stats
         <div className="grid grid-cols-3 gap-4 md:gap-8 mt-16 md:mt-24 pt-12 md:pt-16 border-t-2 border-gray-200">
           {[
             { number: '50+', label: 'Completed Projects' },
@@ -330,7 +330,7 @@ const ApartmentsPage = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* CTA */}
         <div className="mt-16 md:mt-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden shadow-2xl">

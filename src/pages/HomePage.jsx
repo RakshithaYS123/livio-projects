@@ -91,7 +91,7 @@ const HomePage = () => {
             Crafted for Comfort. Designed with Soul. Built with Quality that Lasts.
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl drop-shadow-md" style={{ color: "#aea7a7ff" }}>
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl drop-shadow-md" style={{ color: "#fff" }}>
             Welcome to LIVIO — Crafted with Quality.
           </p>
           
