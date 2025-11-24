@@ -26,7 +26,7 @@ const Header = ({ onNavigate, currentPath, onMenuClick }) => {
         // { title: "Villaments", path: "/what-we-do/residential/villaments" },
         { title: "Penthouses", path: "/what-we-do/residential/penthouses" },
         { title: "Commercial", path: "/what-we-do/commercial" },
-        { title: "Contracting", path: "/what-we-do/contracting" },
+        // { title: "Contracting", path: "/what-we-do/contracting" },
       ],
     },
     { label: "SUSTAINABILITY", path: "/sustainability" },

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Coffee, DoorOpen, Sparkles, Trophy, Store, UtensilsCrossed, ChevronDown } from 'lucide-react';
 
 const CommercialPage = () => {
-  const [activeSection, setActiveSection] = useState(0);
+  const [activeSection,setActiveSection] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const sectionRefs = useRef([]);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Home, Bed, Utensils, BookOpen, Tv, Sparkles, Wine, Users, Archive, Package, Bath, DoorOpen } from 'lucide-react';
+import { ChevronRight, Bed, Utensils, BookOpen, Tv, Sparkles, Wine, Users, Archive, Package, Bath, DoorOpen } from 'lucide-react';
 
 const VillasPage = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);

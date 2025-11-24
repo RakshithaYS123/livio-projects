@@ -17,7 +17,7 @@ import {
   // VillamentsPage,
   PenthousesPage,
   CommercialPage,
-  ContractingPage,
+  // ContractingPage,
 } from "../pages";
 
 // Ensure routes keys exactly match PAGE_CONTENT keys
@@ -39,7 +39,7 @@ export const routes = {
   // "/what-we-do/residential/villaments": VillamentsPage,
   "/what-we-do/residential/penthouses": PenthousesPage,
   "/what-we-do/commercial": CommercialPage,
-  "/what-we-do/contracting": ContractingPage,
+  // "/what-we-do/contracting": ContractingPage,
   // Fallback route for unknown paths
   "*": NotFoundPage,
 };
