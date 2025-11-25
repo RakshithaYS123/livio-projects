@@ -291,11 +291,14 @@ const CommercialPage = () => {
                     <div className="space-y-6">
                       {/* Category Number */}
                       <div 
-                        className="text-8xl md:text-9xl font-black opacity-10"
-                        style={{ color: space.color }}
-                      >
-                        {String(index + 1).padStart(2, '0')}
-                      </div>
+  className="text-8xl md:text-9xl font-black transition-opacity duration-300"
+  style={{ 
+    color: space.color,
+    opacity: activeSection === index ? 1 : 0.1
+  }}
+>
+  {String(index + 1).padStart(2, '0')}
+</div>
 
                       {/* Title */}
                       <div>

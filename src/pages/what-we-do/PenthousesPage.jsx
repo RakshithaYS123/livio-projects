@@ -338,14 +338,14 @@ const PenthousePage = () => {
 
                         {/* Floating Number Badge */}
                         <div 
-                          className="absolute top-8 right-8 w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-black text-white transform -rotate-12 group-hover:rotate-0 transition-all duration-700 shadow-2xl"
-                          style={{
-                            backgroundColor: space.color,
-                            boxShadow: `0 20px 60px ${space.color}80`
-                          }}
-                        >
-                          {String(index + 1).padStart(2, '0')}
-                        </div>
+  className="text-[10rem] md:text-[11rem] font-black leading-none select-none transition-opacity duration-300"
+  style={{ 
+    color: space.color,
+    opacity: activeSection === index ? 0.2 : 0.05
+  }}
+>
+  {String(index + 1).padStart(2, '0')}
+</div>
                       </div>
 
                       {/* Decorative Element Below Image */}
